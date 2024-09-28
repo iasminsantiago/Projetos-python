@@ -1,7 +1,7 @@
 # Projetos Python 🐍
 
-Desafios de código realizados durante formações em Python, sendo a pasta DIO a mais recente e complexa.
+Desafios de código realizados durante formações em Python, sendo os da pasta DIO mais recentes e complexos.
 
 ### Fontes:
-- Curso em Video - Mundo Python
-- DIO - desafios de código
+- Curso em Video - Mundo Python - meus primeiros programas
+- DIO - desafios de código 
