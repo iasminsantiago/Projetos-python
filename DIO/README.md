@@ -1,5 +1,6 @@
 ## Olá! 👋 
 ➡️ Aqui reuno os projetos realizados em desafios de código Python da DIO.
+
 ➡️ Here I collect projects from coding challenges on Python from DIO. 
 
 👉 Temas abordados: funções, estruturas de repetição e condição, operadores e, principalmente, a lógica e estruturação de um problema.
