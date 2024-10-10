@@ -1,0 +1,38 @@
+# criando um programa com POO
+	# João tem uma bicicletaria
+	# Ele quer registrar vendas das bicicletas
+	# Crie um programa para João onde:
+		# Ele informa: cor, modelo, ano e valor das bicicletas vendidas (características)
+		# Uma bicicleta pode: buzinar, parar e correr (comportamentos)
+		
+# Vamos definir características:		
+class Bicicleta:
+	def __init__(self, cor, modelo, ano, valor):
+	# Vamos receber essas características (usando método construtor):
+	self.cor = cor
+	self.modelo = modelo
+	self.ano = ano
+	self.valor = valor
+	self.marcha = 1
+	
+ # Vamos definir os métodos:
+ def buzinar(self):
+		 print("PLim plim")
+		 
+	def parar(self):
+		print("Parando bicicleta ....")
+		print("Bicicleta parada!")
+		
+	def correr(self):
+	  print("Vrummmm")
+ 
+
+  
+# Vamos instanciar objeto (uma bicicleta vendida):
+b1 = Bicicleta("vermelha", "caloi", 2022, 600)	
+b1.buzinar()
+b1.correr()
+b1.parar()
+print(b1.cor, b1.modelo, b1.ano, b1.valor)
+
+
