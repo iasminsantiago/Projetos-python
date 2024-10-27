@@ -29,6 +29,7 @@ else:
 
 
 
+
 #### Questão 3
 # Escreva um programa que determine se uma letra fornecida pela pessoa usuária é uma vogal ou consoante.
 
@@ -42,4 +43,120 @@ if letra in vogal:
 else:
     print(f"A lera {letra} é uma consoante")
 
+
+
+
+#### Questão 4
+# Escreva um programa que leia valores médios de preços de um modelo de carro por 3 anos consecutivos e exiba o valor mais alto e mais baixo entre esses três anos.
+preco_ano1 = float(input('Informe o preço médio do carro no primeiro ano: '))
+preco_ano2 = float(input('Informe o preço médio do carro no segundo ano: '))
+preco_ano3 = float(input('Informe o preço médio do carro no terceiro ano: '))
+
+# Determinar o maior valor usando ifs independentes:
+maior = preco_ano1
+if preco_ano2 > maior:
+   maior = preco_ano2 
+   # caso valor do ano 2 seja maior, variável será atualizada com valor dela
+if preco_ano3 > maior:
+    maior = preco_ano3 
+    # como os ifs são independentes, todos os ifs são executados. Se ano 3 for maior que ano 2 e este for maior que ano 1, variável será atualizada como valor_ano3. 
+
+
+# Determinar o menor valor usando ifs independentes:
+menor = preco_ano1
+if preco_ano2 < menor:
+    menor  = preco_ano2
+if preco_ano3 < menor:
+    menor = preco_ano3
+
+# Mostrando os resultados:
+print(f"O preço mais alto foi R$ {maior} e o menor preço foi R$ {menor} nesses 3 anos.")
                    
+
+
+
+#### Questão 5
+# Escreva um programa que pergunte sobre o preço de três produtos e indique qual é o produto mais barato para comprar.
+p1 = float(input("Qual é o preço do primeiro produto? R$ "))
+p2 = float(input("Qual é o preço do segundo produto? R$ "))
+p3 = float(input("Qual é o preço do terceiro produto? R$ "))
+
+# Avaliando o menor preço dentre os produtos, não é possível usar a lógica da questão 4 pois precisamos informar qual foi o produto com menor valor, e ela só revelaria o menor preço. Podemos usar operador AND que se torna true caso uma variável seja menor que as outras:
+if p1 < p2 and p1 < p3:
+    print("O primeiro produto é o mais barato!")
+elif p2 < p1 and p2 < p3:
+    print("O segundo produto é o mais barato!")
+elif p3 < p1 and p3 < p2:
+    print("O terceiro produto é o mais barato!")
+# Pode haver todos com o mesmo valor:
+elif p1 == p2 == p3:
+    print("Todos os produtos têm o mesmo preço.")
+# Pode haver alguns deles com mesmo preço, não todos:
+    # Se eu escrever só até aqui, informar p1 e p2 iguais e maiores que p3, ele revela que p3 é o mais barato. 
+    # Mas se eu informo p1 e p2 iguais e menores que p3, ele não revelará p1 e p2 como mais baratos. Vamos criar essas condições: 
+else:
+    if p1 == p2:
+        print("O primeiro e segundo produtos são os mais baratos.")
+    if p1 == p3:
+        print("O primeiro e terceiro produtos são os mais baratos.")
+    if p2 == p3:
+        print("O segundo e terceiro produtos são os mais baratos.")
+                   
+
+
+
+#### Questão 6
+# 
+                   
+
+
+
+#### Questão 7
+# 
+                   
+
+
+
+#### Questão 8
+# 
+                   
+
+
+
+#### Questão 9
+# 
+                   
+
+
+
+#### Questão 10
+# 
+                   
+
+
+
+#### Questão 11
+# 
+                   
+
+
+
+#### Questão 12
+# 
+                   
+
+
+
+#### Questão 13
+#                    
+
+
+
+#### Questão 14
+# 
+                   
+
+
+
+#### Questão 15
+# 
