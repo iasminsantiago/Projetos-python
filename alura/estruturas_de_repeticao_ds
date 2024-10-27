@@ -1,0 +1,45 @@
+#### Questão 1
+# Escreva um programa que peça à pessoa usuária para fornecer dois números e exibir o número maior.
+
+numero_1 = int(input("Digite um número: "))
+numero_2 = int(input("Digite outro número:"))
+
+if numero_1>numero_2:
+  print(f"O primeiro número é maior: {numero_1}.")
+
+elif numero_1<numero_2:
+  print(f"O segundo número é maior: {numero_2}.")
+
+else:
+  print("Os dois número são iguais.")  # Não precisa do f pois não tem variável dentro.
+
+
+
+
+#### Questão 2
+# Escreva um programa que solicite o percentual de crescimento de produção de uma empresa e informe se houve um crescimento (porcentagem positiva) ou decrescimento (porcentagem negativa).
+variacao = float(input("Qual é o percentual de crescimento de produção da empresa?"))
+
+if variacao > 0:
+  print(f"Houve um crescimentode {variacao}%.")
+elif variacao < 0:
+  print(f"Houve um descréscimo de {variacao}%.")
+else:
+  print("Não houve variação") 
+
+
+
+#### Questão 3
+# Escreva um programa que determine se uma letra fornecida pela pessoa usuária é uma vogal ou consoante.
+
+letra = input("Informe uma letra:")
+# vogal = a, e, i, o, u  -> tupla, pois separo itens por virgula, ' ' e sem parênteses. São valores independentes.
+
+vogal = 'aeiou'  # é uma string pois tem todos os itens juntos, num único valor. Também imutável, mas tratada como bloco único de texto. Cada items pode ser acessado indivualmente, mas formam uma sequência única.
+
+if letra in vogal:
+    print(f"A letra {letra} é uma vogal.")
+else:
+    print(f"A lera {letra} é uma consoante")
+
+                   
