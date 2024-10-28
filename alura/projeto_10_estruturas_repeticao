@@ -1,0 +1,42 @@
+#### Questão 10
+# Um programa deve ser escrito para ler dois números e, em seguida, perguntar à pessoa usuária qual operação ele deseja realizar. 
+# O resultado da operação deve incluir informações sobre o número - se é par ou ímpar, positivo ou negativo e inteiro ou decimal.
+
+num1 = float(input("Informe o primeiro número: "))
+num2 = float(input("Informe o segundo número: "))
+
+operacao = input("Informe qual operação deseja realizar (+, -, * ou /): ")
+
+# Calculando com a operação desejada:
+if operacao == "+": # é um string, por isso usamos "". Nçao esquecer de usar ==, estamos comparando. 
+    resultado = num1 + num2 # já aqui, estamos atribuindo.
+elif operacao == "-":
+    resultado = num1 - num2
+elif operacao == "*":
+    resultado = num1 * num2
+elif operacao == "/":
+    resultado = num1/num2
+else:
+    print("Operação inválida, resultado da operação será 0.")
+    resultado = 0 # usaremos isso nas próximas etapas, é importante atribuir valor até ao dado inválido.
+
+
+# Determinando informações do resultado:
+if resultado % 2 == 0:
+    print(f"O resultado {resultado} é par.")
+else:
+    print(f"O resultado {resultado} é ímpar.") # não é indentado pois cada trecho será independente, então teremos ifs
+
+if resultado > 0:
+    print(f"O resultado {resultado} é positivo.")
+elif resultado == 0:
+    print("O resultado {resultado} é neutro.")
+else:
+    print(f"O resultado {resultado} é negativo.")
+
+if resultado % 10 == 0:
+    print(f"O resultado {resultado} é inteiro.")
+else:
+    print(f"O resultado {resultado} é decimal.")
+
+
