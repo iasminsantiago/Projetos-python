@@ -1,0 +1,33 @@
+#### Questão 13
+# Em uma empresa de venda de imóveis você precisa criar um código que analise os dados de vendas anuais para ajudar a diretoria na tomada de decisão. 
+# O código precisa coletar os dados de quantidade de venda durante os anos de 2022 e 2023 e fazer um cálculo de variação percentual. 
+# A partir do valor da variação, deve ser enviada às seguintes sugestões:
+ # Para variação acima de 20%: bonificação para o time de vendas.
+ # Para variação entre 2% e 20%: pequena bonificação para time de vendas.
+ # Para variação entre 2% e -10%: planejamento de políticas de incentivo às vendas.
+ # Para bonificações abaixo de -10%: corte de gastos.
+
+
+ # Coletar dados de quantidade de venda durante 2022 e 2023:
+vendas_2022 = float(input("Informe a quantidade de vendas durante 2022: "))
+vendas_2023 = float(input("Informe a quantidade de vendas durante 2023: "))
+
+# Calcular variação:
+variacao_perc = 100*(vendas_2023 - vendas_2022)/vendas_2022 # Multiplicar por 100, assim vira %.
+
+
+# Sugestões para a diretoria:
+if variacao_perc > 20:
+    print("Bonificação para o time de vendas!")
+
+elif 2 < variacao_perc <= 20:
+    print("Pequena bonificação para time de vendas!")
+
+elif -10 < variacao_perc <= 2:
+    print("Planejamento de políticas de incentivo às vendas.") 
+    # colocar <= 2 aqui ao invés de 2 <= no elif acima é interpretação. 
+    # A questão não informou qual das respostas à diretoria devemos considerar 2% como parte de seus valores. Em bonificação e em planejamento de  incentivo, ambos podem envolver 2. Na resolução do professor, ele preferiu considerar 2 para pequena bonificação, usando 2 <=...
+
+else:
+    print("Corte de gastos.")
+
