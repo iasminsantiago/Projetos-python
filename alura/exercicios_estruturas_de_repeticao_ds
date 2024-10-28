@@ -106,57 +106,77 @@ else:
 
 
 #### Questão 6
-# 
+# Escreva um programa que leia três números e os exiba em ordem decrescente.
+n1 = float(input("Qual é o primeiro número? "))
+n2 = float(input("Qual é o segundo número? "))
+n3 = float(input("Qual é o terceiro número? "))
+
+if n1 > n2 and n1 > n3:
+    print (n1)
+    if n2 >= n3:
+        print(n2)
+        print(n3)
+    else:
+        print(n3) # não juntei n2 e n3 pois exibiria eles na mesma linha, quebrando organização
+        print(n2)
+
+elif n2 > n1 and n2 > n3:
+    print (n2)
+    if n1 >= n3:
+        print(n1)
+        print(n3)
+    else:
+        print(n3) 
+        print(n1)
+
+else:  # não precisa colocar n3 > n1 and n3 > n2:
+    print (n3)
+    if n1 >= n2:
+        print(n1)
+        print(n2)
+    else:
+        print(n2) 
+        print(n1)
                    
 
 
 
 #### Questão 7
-# 
+# Escreva um programa que pergunte em qual turno a pessoa usuária estuda ("manhã", "tarde" ou "noite") e exiba a mensagem "Bom Dia!", "Boa Tarde!", "Boa Noite!", ou "Valor Inválido!", conforme o caso.
+turno = input("Digite qual turno você estuda (manhã, tarde ou noite) ") # mencionar como deseja que o usuário informe o dado -> minúsculo com acento, assim o programa lê. Outra opção é atribuir número a cada turno e pedir para usuário escolher.
+
+if turno == "manhã":  # não esquecer de usar  ==, que é igualar. = é atribuição, se usar =, você muda valor de turno informado aneriormente pelo usuário.
+    print("Bom dia!")
+elif turno == "tarde":
+    print("Boa tarde!")
+elif turno == "noite":
+    print("Boa noite!")
+else:
+    print("Valor inválido!")
                    
 
 
 
 #### Questão 8
-# 
+# Escreva um programa que peça um número inteiro à pessoa usuária e determine se ele é par ou ímpar. Dica: Você pode utilizar o operador módulo %.
+numero = int(input("Informe um número inteiro: "))
+
+if numero % 2 == 0:
+    print(f"O número {numero} é par.")
+else:
+    print(f"O número {numero} é ímpar.")
                    
 
 
 
 #### Questão 9
-# 
+# Escreva um programa que peça um número à pessoa usuária e informe se ele é inteiro ou decimal.
+numero = float(input("Informe um número: ")) # se não mencionar o float, ou nenhum tipo numérico, será um char e o programa não rodará como desejado.
+
+if numero % 1 == 0:
+    print(f"O número {numero} é inteiro.")
+else:
+    print(f"O número {numero} é decimal.")
                    
 
 
-
-#### Questão 10
-# 
-                   
-
-
-
-#### Questão 11
-# 
-                   
-
-
-
-#### Questão 12
-# 
-                   
-
-
-
-#### Questão 13
-#                    
-
-
-
-#### Questão 14
-# 
-                   
-
-
-
-#### Questão 15
-# 
