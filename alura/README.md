@@ -1,10 +1,10 @@
 # Desafios de código da Alura 🔤
 
-### Python para Data Science: Primeiros Passos 🐍 
+### Python para Data Science: Primeiros Passos 🐍 projetos 10 a 13
 - "estruturas_condicionais" ↔️
 - "estruturas_repeticao" 🔃
 
 
-### Python para Data Science: trabalhando com funções, estruturas de dados e exceções 🐍 
+### Python para Data Science: trabalhando com funções, estruturas de dados e exceções 🐍 projetos 7 a 9
 - Importação de bibliotecas
 - Bibliotecas matplotlib, math, random
