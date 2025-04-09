@@ -7,4 +7,4 @@
 
 ### Python para Data Science: trabalhando com funções, estruturas de dados e exceções 🐍 
 - Importação de bibliotecas
-- 
+- Bibliotecas matplotlib, math, random
