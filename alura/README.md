@@ -1,6 +1,6 @@
 # Desafios de código da Alura 🔤
 
-### Python para Data Science: Primeiros Passos 🐍 projetos 1 a 4
+### Python para Data Science: Primeiros Passos 🐍 projetos 1 a 5
 - "estruturas_condicionais" ↔️
 - "estruturas_repeticao" 🔃
 
