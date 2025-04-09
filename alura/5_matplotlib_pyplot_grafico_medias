@@ -1,0 +1,7 @@
+# 5. Mostre o gráfico das médias de alunos, informadas attravés da lista abaixo:
+
+import matplotlib.pyplot as plt
+estudantes = ["João", "Maria", "José"]
+notas = [8.5, 9, 6.5]
+
+plt.bar(x = estudantes, height = notas)  # do plt, quero o bar
