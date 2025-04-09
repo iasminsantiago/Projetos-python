@@ -6,4 +6,4 @@
 
 
 ### Python para Data Science: trabalhando com funções, estruturas de dados e exceções 🐍 
-- Importação de bibliotecas e métodos específicos: matplotlib, math, random - projetos 5 a 9
+- Importação de bibliotecas e métodos específicos: matplotlib, math, random - projetos 6 a 10
