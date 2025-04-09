@@ -1,4 +1,4 @@
-# Desafios de código de cursos realizados na Alura 🔤
+# Desafios de código da Alura 🔤
 
 ### Python para Data Science: Primeiros Passos 🐍 
 - "estruturas_condicionais" ↔️
