@@ -1,0 +1,19 @@
+# 6. Para diversificar e atrair novos(as) clientes, uma lanchonete criou um item misterioso em seu cardápio chamado "salada de frutas surpresa".
+
+# Neste item, são escolhidas aleatoriamente 3 frutas de uma lista de 12 para compor a salada de frutas da pessoa cliente. Crie o código que faça essa seleção aleatória de acordo com a lista abaixo:
+
+from random import choices
+
+frutas = ["maçã", "banana", "uva", "pêra",
+          "manga", "coco", "melancia", "mamão",
+          "laranja", "abacaxi", "kiwi", "ameixa"]
+
+# random.choices(population, weights=None, *, cum_weights=None, k=1)
+# Retorna uma lista do tamanho de k de elementos escolhidos da population com substituição
+
+# Gerando uma lista com a escolha aleatoria de 3 frutas
+salada = choices(frutas, k=3)
+
+# Imprimindo os itens da lista de frutas gerada
+print(salada)
+print(f"A salada surpresa é: {salada[0]}, {salada[1]} e {salada[2]}")
