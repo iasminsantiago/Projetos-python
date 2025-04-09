@@ -5,6 +5,6 @@
 - "estruturas_repeticao" 🔃
 
 
-### Python para Data Science: trabalhando com funções, estruturas de dados e exceções 🐍 projetos 7 a 9
+### Python para Data Science: trabalhando com funções, estruturas de dados e exceções 🐍 projetos 6 a 9
 - Importação de bibliotecas
 - Bibliotecas matplotlib, math, random
