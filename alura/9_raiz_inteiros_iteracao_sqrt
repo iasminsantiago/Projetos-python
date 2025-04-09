@@ -1,0 +1,40 @@
+# 9. Você recebeu um desafio de calcular a raiz quadrada de uma lista de números, identificando quais resultaram em um número inteiro.
+# IMPORTAR BIBLIOTEACA/FUNÇÃO
+from math import sqrt
+
+# INFORMAR LISTA DE VALORES A SE OPERAR
+# A lista é a seguinte:
+numeros = [2, 8, 15, 23, 91, 112, 144, 256]
+
+
+# Dica: use a comparação entre a divisão *inteira* (//) da raiz por 1 com o valor da raiz para verificar se o número é inteiro. Por exemplo:
+# num = 1.5
+# num_2 = 2
+# print(f'{num} é inteiro? :', num // 1 == num)
+# se parte inteira for igual a número em si, então ele é inteiro, pois não tem parte decimal.
+# print(f'{num_2} é inteiro? :', num_2 // 1 == num_2)
+# 1.5 é inteiro? : False
+#2 é inteiro? : True
+
+
+# CRIAR LISTA QUE RECEBERÁ RAIZES QUADRADAS
+# Onde guardar / quem recebe os números que forem inteiros? -> Vriar uma lista vazia para recebê-los: 
+raiz = []
+
+
+# OPERAR CÁLCULO DE RAIZES QUADRADAS EM CADA ELEMENTO - ITERANDO!
+# Como checar cada número e se inteiro, adicionar a raiz? 
+# Faz uma iteração. Para isso, usamos for:
+for numero in numeros:
+    raiz.append(sqrt(numero)) # note que usamos numero, não números, pois usar a lista numeros não executaria iteração de cada elemento de numeros. for numero in numeros indica que nova variável numero recebe resultado de raiz quadrada do mesmo indice de numeros, e o for repete esse processo salvando cada resultado de numero na lista raiz.
+
+# OPERAR CÁLCULO DE QUE RAIZES SÃO INTEIRAS EM RAIZ - ITERANDO!
+# FIzemos a riz quadrada. Como mostraremos quais são inteiras? Fazendo numero // 1 == numero se true. 
+# Como ler a lista raiz e exibir texto somente se raiz for inteiro? Usa for e também tal condição:
+for i in range(len(raiz)):  #  é usado para iterar pelos índices da lista raiz.. range(len(raiz)) → gera uma sequência de números de 0 até len(raiz) - 1. Exemplo: Se raiz = [1.41, 2.82, 3.87, 5.0, 6.0], então len(raiz) é 5, e range(len(raiz)) será [0, 1, 2, 3, 4].
+    if raiz[i] // 1 == raiz[i]: 
+        # como lerá cada indice de raiz? fazendo raiz[i] 
+        print(f"O número {numeros[i]} possui raiz quadrada inteira igual a {int(raiz[i])}")
+
+
+# No final, informar quais números possuem raízes inteiras e seus respectivos valores.
