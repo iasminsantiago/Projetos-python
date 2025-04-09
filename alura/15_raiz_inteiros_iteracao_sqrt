@@ -1,4 +1,5 @@
-# 9. Você recebeu um desafio de calcular a raiz quadrada de uma lista de números, identificando quais resultaram em um número inteiro.
+# Projeto 15
+# Você recebeu um desafio de calcular a raiz quadrada de uma lista de números, identificando quais resultaram em um número inteiro.
 # IMPORTAR BIBLIOTEACA/FUNÇÃO
 from math import sqrt
 
