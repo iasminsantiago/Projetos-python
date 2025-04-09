@@ -1,4 +1,4 @@
-# 6. Mostre o gráfico das médias de alunos, informadas attravés da lista abaixo:
+# 5. Mostre o gráfico das médias de alunos, informadas attravés da lista abaixo:
 
 import matplotlib.pyplot as plt
 estudantes = ["João", "Maria", "José"]
