@@ -5,5 +5,5 @@
 - "estruturas_repeticao" 🔃
 
 
-### Python para Data Science: trabalhandocom funções, estruturas de dados e exceções 🐍 
+### Python para Data Science: trabalhando com funções, estruturas de dados e exceções 🐍 
 - 
