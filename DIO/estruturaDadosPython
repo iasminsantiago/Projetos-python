@@ -1,0 +1,51 @@
+# Sistema de vendas que as organiza por categoria antes de gerar um relatório
+  # Criar a classe categoria, que gerencia as vendas de certa categoria e calcule o total de vendas dessa categoria
+
+
+
+class Venda:
+    def __init__(self, produto, quantidade, valor):
+        self.produto = produto
+        self.quantidade = quantidade
+        self.valor = valor
+
+class Categoria:
+    def __init__(self, nome):
+        self.nome = nome
+        self.vendas = []
+
+    # Adiciona uma venda à lista da categoria
+    def adicionar_venda(self, venda):
+        self.vendas.append(venda)
+
+    # Calcula o total das vendas (soma dos valores)
+    def total_vendas(self):
+        total = 0
+        for venda in self.vendas:
+            total += venda.valor
+        return total
+
+def main():
+    categorias = []
+
+    for i in range(2):
+        nome_categoria = input()
+        categoria = Categoria(nome_categoria)
+
+        for j in range(2): 
+            entrada_venda = input()
+            produto, quantidade, valor = entrada_venda.split(',')
+            quantidade = int(quantidade.strip())
+            valor = float(valor.strip())
+
+            venda = Venda(produto.strip(), quantidade, valor)
+            categoria.adicionar_venda(venda)
+
+        categorias.append(categoria)
+    
+    # Exibe o total de vendas por categoria no formato exato
+    for categoria in categorias:
+        print(f"Vendas em {categoria.nome}: {categoria.total_vendas()}")
+
+if __name__ == "__main__":
+    main()
