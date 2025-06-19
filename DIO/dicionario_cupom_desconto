@@ -1,0 +1,24 @@
+# Uma loja online deseja aplicar descontos em seus produtos com base em cupons de desconto digitados pelos clientes.
+#📌 Regras de desconto: "DESCONTO10": 10% de desconto //"DESCONTO20": 20% de desconto // "SEM_DESCONTO": Sem desconto
+# Entradas: Preço original do produto // Código do cupom digitado.
+# Saída:  Preço final após aplicar o desconto com duas casas decimais // 
+
+
+# Dicionário com os valores de desconto:
+descontos = {
+    "DESCONTO10": 0.10,
+    "DESCONTO20": 0.20,
+    "SEM_DESCONTO": 0.00
+}
+
+# Entrada do usuário:
+preco = float(input("Informe o preço: ").strip())    # método strip remove espaços em branco, caso usuário digite cupom com espaços
+cupom = input("Informe o cupom: ").strip()
+
+# Saída: aplicando o desconto se o cupom for válido
+if cupom in descontos:
+   desconto = descontos[cupom]    # descontos[cupom] busca o valor correspondente à chave "DESCONTO10"
+   preco_final = preco*(1-desconto)
+   print(f"{preco_final:.2f}")
+else:
+    print(f"{preco:.2f}")  # Se o cupom for inválido, retorna o preço original
