@@ -1,0 +1,38 @@
+# Uma empresa quer validar se os e-mails cadastrados pelos usuários estão no formato correto. 
+# Crie uma função que receba um e-mail e verifique se ele é válido, seguindo as regras:
+
+# 📌 Regras para um e-mail válido:  
+  # Deve conter o caractere "@" e um domínio, como gmail.com ou outlook.com.
+  # Não pode começar ou terminar com "@".
+  # Não pode conter espaços. -> usar strip() para tirar qualquer espaço no inicio ou fim
+
+# Entrada: Uma string contendo o e-mail a ser validado.
+email = input("Digite o e-mail: ").strip()   
+
+# Verifique as regras do e-mail:
+  # "E-mail válido" se o e-mail estiver no formato correto.
+  #"E-mail inválido" caso contrário.
+
+def validar_email(email):
+
+  #Regra 1: Deve conter o caractere "@" e um domínio, como gmail.com ou outlook.com.
+  if "@" not in email:      # para melhoria: testar se email é de dominio existente
+    return "E-mail inválido"
+
+  # Regra 2: Não pode começar ou terminar com "@".
+  if email.startswith("@") or email.endswith("@"):
+    return "E-mail inválido"
+
+ # Regra 3: Não pode conter espaços.
+  if " " in email:
+    return "E-mail inválido"
+
+  else:
+    return "E-mail válido"
+
+# Saída
+print(validar_email(email))  # se não inserir isso, retorna só o e-mail
+
+
+
+
