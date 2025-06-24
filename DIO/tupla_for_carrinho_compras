@@ -1,0 +1,31 @@
+# Criar um sistema de carrinho de compras que permita adicionar produtos e calcular o valor total da compra.
+  # Entrada: Lista de produtos adicionados ao carrinho (cada um com nome e preço).
+  # Saída: Lista dos produtos adicionados e o total da compra.
+
+# Lista para armazenar os produtos e preços
+carrinho = [] # será uma tupla
+total = 0.0
+
+# Entrada do número de itens
+n = int(input().strip())         # quantos itens o cliente inserirá, será usado para rodar o loop a seguir.
+
+# Loop para adicionar itens ao carrinho
+for _ in range(n):                                # o "_"é uma convensão no python par aindicar que não usarei essa variável _ dentro do loop.
+    linha_digitada = input().strip()  
+    
+    # Encontra a última ocorrência de espaço, na linha digitada pelo cliente, para separar nome e preço
+    posicao_espaco = linha_digitada.rfind(" ")      # ex.: cliente digita "Leite Condensado 4.99".
+    
+    # Separa o nome do produto e o preço
+            # Exemplo: linha = "Suco de Laranja 6.25" / item = "Suco de Laranja" / preco = 6.25
+    item = linha_digitada[:posicao_espaco]              # pega do início da string até o último espaço, ou seja, o nome do produto.
+    preco = float(linha_digitada[posicao_espaco + 1:])  # pega depois do espaço até o fim, e converte para float.
+  
+    # Adiciona ao carrinho
+    carrinho.append((item, preco))           # adiciona uma tupla à lista do carrinho.
+    total += preco                           # vai somando todos os preços para mostrar no fim.
+
+# Exibe os itens e o total da compra
+for item, preco in carrinho:
+    print(f"{item}: R${preco:.2f}")
+print(f"Total: R${total:.2f}")
