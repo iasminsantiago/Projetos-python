@@ -1,0 +1,60 @@
+# Uma clínica médica quer automatizar seu sistema de atendimento. 
+# Criaremos uma função que organize os pacientes em ordem de prioridade com base na idade e na urgência do caso.
+
+# 📌 Critérios de Prioridade:
+# Pacientes acima de 60 anos têm prioridade.
+# Pacientes que apresentam a palavra "urgente" na ficha têm prioridade máxima.
+# Os demais pacientes são atendidos por ordem de chegada.
+
+# Entrada
+# Um número inteiro n, representando a quantidade de pacientes.
+# n linhas seguintes, cada uma contendo os dados de um paciente no formato: nome, idade, status
+# nome: string representando o nome do paciente.
+# idade: número inteiro representando a idade do paciente.
+# status: string que pode ser "urgente" ou "normal".
+
+# Saída
+# A saída deve exibir a lista dos pacientes ordenada de acordo com as regras de prioridade, no formato: Ordem de Atendimento: nome1, nome2, nome3, ...
+
+
+# Entrada do número de pacientes
+n = int(input().strip())
+
+# Lista para armazenar pacientes
+pacientes = []
+
+# Loop para entrada de dados
+for _ in range(n):
+    nome, idade, status = input().strip().split(", ")
+    idade = int(idade)
+    pacientes.append((nome, idade, status))
+
+# Ordenar por prioridade: urgente > idosos > demais:
+# Listas para diferentes níveis de prioridade
+urgentes = []
+idosos = []
+demais = []
+
+# Classificar cada paciente
+for nome, idade, status in pacientes:
+    if status.lower() == "urgente":
+        urgentes.append((nome, idade))
+    elif idade >= 60:
+        idosos.append(nome)
+    else:
+        demais.append(nome)
+
+# Ordenar urgentes por idade decrescente
+urgentes.sort(key=lambda x: x[1], reverse=True)  # Quero ordenar essa lista com base no segundo item de cada tupla (x[1]), ou seja, a idade.
+                                                 # lambda x: → função anônima (sem nome) que recebe x, que é cada tupla da lista
+                                                 # x[1] → significa "pegue a idade" (porque é o segundo item da tupla)
+                                                 # Revrese=True ordena do maior para o menor" (decrescente)
+
+# Extrair apenas os nomes
+urgentes = [nome for nome, _ in urgentes]
+        
+# Juntar todos em ordem de prioridade
+ordem_final = urgentes + idosos + demais
+
+# Exibir a ordem de atendimento com título e vírgulas:
+print("Ordem de Atendimento:", ", ".join(ordem_final))
