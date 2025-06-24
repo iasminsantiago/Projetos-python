@@ -1,0 +1,27 @@
+# Uma empresa quer criar um organizador de eventos que divida os participantes em grupos de acordo com o tema escolhido.
+# Entrada: Lista de participantes e o tema escolhido por cada um.
+# Saída: Dicionário agrupando os participantes por tema.
+
+
+
+# Dicionário para agrupar participantes por tema
+eventos = {}
+
+# Entrada do número de participantes
+n = int(input().strip())
+
+# Criando um loop para armazenar participantes e seus temas:
+    # Exemplo: Lucas, Fotografia / Ana, Viagem / Carlos, Fotografia
+for _ in range(n):
+  entrada = input().strip()
+  participantes, tema = entrada.split(", ")         # split divide a string onde encontrar ", " e retorna uma lista com duas partes: [parte1, parte2].
+
+  # Se o tema ainda não existe no dicionário, cria uma lista vazia / nova entrada no dicionário eventos, com a chave sendo o tema e o valor sendo uma lista vazia.
+  if tema not in eventos:
+      eventos[tema] = []
+  # Adiciona o participante ao tema correspondente
+  eventos[tema].append(participantes)
+  
+# Exibe os grupos organizados
+for tema, participantes in eventos.items():           # eventos.items() retorna uma lista de pares (chave, valor), ou seja, (tema, lista_de_participantes).
+    print(f"{tema}: {', '.join(participantes)}")      # ', '.join(participantes) junta os nomes da lista em uma única string separada por vírgulas (ex: "Lucas, Carlos").
