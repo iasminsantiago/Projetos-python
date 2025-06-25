@@ -1,0 +1,44 @@
+# Uma pousada deseja automatizar seu sistema de reservas. 
+# Criaremos uma função que receba uma lista de quartos disponíveis e uma lista de reservas solicitadas. 
+    # A função deve verificar quais reservas podem ser aceitas e quais devem ser recusadas por falta de disponibilidade.
+
+# Entrada
+# Uma lista contendo os números dos quartos disponíveis.
+# Uma lista contendo os números dos quartos solicitados pelos clientes.
+
+# Saída
+# Uma mensagem informando quais reservas foram confirmadas e quais foram recusadas.
+
+
+def processar_reservas():
+    # Entrada dos quartos disponíveis
+    quartos_disponiveis = set(map(int, input().split()))
+        # .split() → Divide a string em partes, separadas por espaço. Exemplo: "101 102 103 104" / Resultado: ["101", "102", "103", "104"] → lista de strings
+        # map(int, [...] Aplica a função int() em cada item da lista, transformando as strings em números inteiros -> [101, 102, 103, 104]
+        # set() converte a lista em um conjunto, que elimina elementos repetidos automaticamente e permite ver se um item está ou não nele
+
+    # Entrada das reservas solicitadas
+    reservas_solicitadas = list(map(int, input().split()))
+
+    # Processamento das reservas:
+
+    # Listas para armazenar resultados
+    confirmadas = []
+    recusadas = []
+
+
+    # Verificar se cada reserva pode ser confirmada com base na disponibilidade dos quartos: 
+    for reserva in reservas_solicitadas:
+        if reserva in quartos_disponiveis:
+            confirmadas.append(reserva)
+            quartos_disponiveis.remove(reserva)  # Remove para não ser reservado duas vezes
+        else:
+            recusadas.append(reserva)
+    
+
+    # Saída dos resultados conforme especificação
+    print("Reservas confirmadas:", " ".join(map(str, confirmadas)))
+    print("Reservas recusadas:", " ".join(map(str, recusadas)))
+
+# Chamada da função principal
+processar_reservas()
