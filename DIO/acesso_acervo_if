@@ -1,0 +1,29 @@
+# Uma biblioteca está implementando um sistema automatizado para liberar o acesso à área de livros raros. 
+# O sistema deve permitir a entrada apenas para visitantes autorizados e com idade mínima de 18 anos. 
+# Para isso, é necessário utilizar operadores lógicos, estruturas condicionais (if, else, else if) e conceitos básicos como tipos primitivos e palavras-chave. 
+# Desenvolvi um programa que verifica se o visitante pode acessar a sala especial.
+
+# ENTRADA - O programa deve receber os seguintes valores:
+ # Um valor booleano indicando se o visitante possui autorização (true ou false)
+ # Um número inteiro representando a idade do visitante
+# SAIDA:
+ # Tem permissão e tem 18 anos ou mais → "Acesso permitido".
+ # Não tem permissão → "Acesso negado".
+ #Tem permissão mas é menor de 18 anos → "Idade insuficiente"
+
+def main():
+    # Entrada de dados do usuário
+    has_permission = input().lower() == "true"  #  valor booleano indicando se o visitante possui autorização 
+    age = int(input()) #idade do visitante
+
+    # Verificar condições de acesso
+    if age >= 18 and has_permission:
+        print("Acesso permitido")
+    elif not has_permission:
+        print("Acesso negado")
+    else:
+        print("Idade insuficiente")
+        
+
+if __name__ == "__main__":
+    main()
