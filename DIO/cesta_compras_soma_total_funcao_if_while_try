@@ -1,0 +1,67 @@
+# Sistema de Registro de Compras - E-commerce 🛒
+
+## 📖 Sobre o projeto
+# Este projeto é um sistema simples para registrar valores de compras realizadas por um cliente ao longo de um único dia.  
+
+# 🧮 Lógica do código
+# Ler o número de compras (N).
+# Se N for 0, exibir "Nenhuma compra registrada." e encerrar.
+# Caso contrário, ler cada valor de compra:
+# Ignorar valores negativos e entradas inválidas.
+# Somar todos os valores válidos.
+# Calcular a média (total / N).
+# Exibir total e média formatados com duas casas decimais.
+
+# Detalhando:
+# O sistema solicita o número de compras e, em seguida, o valor de cada uma, retornando:
+  # **Total gasto no dia**  
+  # **Média por compra**  
+  # Caso nenhuma compra seja registrada (`N = 0`), o sistema informa que não houve compras.
+
+## 🛠 Tecnologias utilizadas
+ # Python 3.x
+
+## 📥 Entrada
+ # Um número inteiro `N` representando a quantidade de compras.  
+ # Em seguida, `N` números reais (`float`), cada um representando o valor de uma compra.  
+
+## 📤 Saída
+ # Se `N > 0`:
+  # Total das compras, com duas casas decimais.
+  # Média de valor por compra, com duas casas decimais.  
+ # Se `N = 0`:
+  # A mensagem `"Nenhuma compra registrada."`
+
+
+
+
+def main():
+    purchase_count = int(input(Digite a quantidade de itens na cesta: "))
+
+    if purchase_count == 0:
+        print("Nenhuma compra registrada.")
+    else:
+        total_spent = 0.0
+        i = 1
+
+        while i <= purchase_count:
+            try:
+                purchase_value = float(input())
+            except ValueError:
+                continue  
+
+            if purchase_value < 0:
+                continue  
+            else:
+                total_spent += purchase_value
+                i += 1
+
+      # Calcular a média
+      average_purchase = total_spent / purchase_count
+
+
+        print(f"O valor total gasto foi: {total_spent:.2f}")
+        print(f"A média de valor gasto foi: {average_purchase:.2f}")
+
+if __name__ == "__main__":
+    main()
