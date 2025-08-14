@@ -36,7 +36,7 @@
 
 
 def main():
-    purchase_count = int(input(Digite a quantidade de itens na cesta: "))
+    purchase_count = int(input("Digite a quantidade de itens na cesta: "))
 
     if purchase_count == 0:
         print("Nenhuma compra registrada.")
