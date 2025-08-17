@@ -1,0 +1,54 @@
+# Um sistema de monitoramento de bicicletas compartilhadas precisa calcular a distância máxima que cada bicicleta pode percorrer, com base no nível atual de bateria.
+# Cada 1% de bateria permite percorrer 0,5 km. 
+# Utilizei os conceitos de Programação Orientada a Objetos (POO) para modelar a bicicleta.
+# Criei uma classe que contenha os atributos necessários e um método para calcular a distância estimada.
+
+# Entrada
+  # A entrada deve conter:
+    # O nome do modelo da bicicleta (String).
+    # O nível de bateria (int).
+
+# Saída
+# Deverá retornar uma mensagem com o modelo da bicicleta e a distância máxima estimada, formatada com uma casa decimal.
+  # Exemplo: Entrada - BikeX 80	// Saída BikeX: Distancia estimada = 40.0 km
+
+# NOTAS DE AULA:
+    # Dentro da classe, você precisa usar self para acessar os atributos.
+
+    
+  class BicicletaInterna:
+    def __init__(self, modelo, nivel_bateria):
+        self.modelo = modelo
+        self.nivel_bateria = nivel_bateria
+
+   def calcular_distancia(self):
+        # Calcular a distância estimada com base no nível de bateriaa -> cada 1% de bateria = 0.5 km
+        return self.nivel_bateria*0.5/1   # No método calcular_distancia, não pode usar nivel_bateria direto, tem que ser self.nivel_bateria.
+
+    def obter_mensagem(self):
+        # Retornar a mensagem formatada com o modelo e a distância
+        return f"{self.modelo}: Distancia estimada = {self.calcular_distancia():.1f} km"
+
+def main():
+    
+    modelo = input()
+    
+    nivel_str = input()
+    nivel_bateria = int(nivel_str)
+
+    # Criar o objeto BicicletaInterna com os dados lidos
+    bicicleta = BicicletaInterna(modelo, nivel_bateria) 
+
+    # bicicleta = instância criada a partir da classe; bicicleta é um objeto/instância da classe BicicletaInterna
+    # ou seja, bicicleta existe na memória e terá um modelo e nivel de bateria definidos ao usuário informar os valores.
+    # classe = molde; bicicleta = o que crio com a classe, é o objeto
+    # A classe define como uma bicicleta deve ser (atributos) e o que ela pode fazer (métodos).
+
+    # Imprimir resultado através dos dados obtidos em main
+    print(bicicleta.obter_mensagem())
+
+
+if __name__ == "__main__":
+    main()
+    
+        
