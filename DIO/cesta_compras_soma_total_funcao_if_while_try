@@ -56,8 +56,8 @@ def main():
                 total_spent += purchase_value
                 i += 1
 
-      # Calcular a média
-      average_purchase = total_spent / purchase_count
+        # Calcular a média
+        average_purchase = total_spent / purchase_count
 
 
         print(f"O valor total gasto foi: {total_spent:.2f}")
