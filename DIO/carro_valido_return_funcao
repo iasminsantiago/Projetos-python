@@ -1,0 +1,56 @@
+# Um aplicativo de monitoramento de carros precisa verificar se um carro está apto para rodar com base no ano de fabricação e no ano atual. 
+# Um carro é considerado apto se tiver até 10 anos de uso. 
+
+# Para resolver este desafio, utilizarei conceitos de Programação Orientada a Objetos (POO), como a definição de métodos estáticos, para realizar a verificação da aptidão do carro sem a necessidade de instanciar objetos. 
+# A aplicação de POO deve ser utilizada para organizar a lógica de verificação do carro e para retornar o resultado da aptidão de forma estruturada.
+
+# Entrada - A entrada deve conter:
+  # O modelo do carro (String).
+  # O ano de fabricação (int).
+  # O ano atual (int).
+
+# Saída
+  # Deverá retornar uma mensagem indicando se o carro está apto ou não.
+  # Retorno em formato de mensagem.
+# Exemplo: Entrada - Civic 2015 2025 // Saída: Civic: Apto
+
+
+
+
+def verificar_aptidao_carro(modelo, ano_fabricacao, ano_atual):
+    
+    idade_carro = ano_atual - ano_fabricacao
+
+    # Verificar se o carro está apto com base na idade
+    if idade_carro <= 10:
+      return f"{modelo}: Apto"  # Precisa ser return, não print
+    else:
+      return f"{modelo}: Nao apto"
+
+# NOTAS
+# precisou ser return, não print, pois em resultado (la em baixo):
+# 1. python entra na função verificar_aptidao_carro com os valores passados
+# 2. executa o codigo dentro da função
+# 3. Chega no return → a função envia aquele valor de volta para a linha que chamou. 
+# No exemplo que demos, o return envia a string "Civic: Apto" (ou "Civic: Nao apto") de volta para a variável  resultado.
+# Já usar print não retorna consequência nenhuma a resultado. Como não retorna nada... resultado = verificar_aptidao_carro(...) vai ser None.
+# return → envia o valor para quem chamou a função, que pode imprimir, guardar ou usar.
+# print → só mostra na tela, a função não “devolve” nada.
+
+
+
+def main():
+    
+    modelo = input()
+    ano_fabricacao = int(input())
+    ano_atual = int(input())
+
+    # Chamar a função para verificar a aptidão do carro
+    resultado = verificar_aptidao_carro(modelo, ano_fabricacao, ano_atual)
+
+   
+    print(resultado)
+
+
+if __name__ == "__main__":
+    main()
