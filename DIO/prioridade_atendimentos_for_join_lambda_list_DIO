@@ -1,0 +1,72 @@
+# ============================================================
+# Uma clínica médica quer automatizar seu sistema de atendimento.
+# Criar uma função que organize os pacientes em ordem de prioridade
+# com base na idade e na urgência do caso.
+#
+# 📌 Critérios de Prioridade:
+# 1. Pacientes que apresentam a palavra "urgente" têm prioridade máxima.
+# 2. Pacientes acima de 60 anos têm prioridade.
+# 3. Os demais pacientes são atendidos por ordem de chegada.
+#
+# Entrada:
+# - Um número inteiro n, representando a quantidade de pacientes.
+# - n linhas seguintes, cada uma contendo:
+#   nome, idade, status
+#   (exemplo: "Carlos, 40, normal")
+#
+# Saída:
+# - Lista dos pacientes ordenada de acordo com as regras de prioridade.
+#   Exemplo: "Ordem de Atendimento: Bruno, Ana, Carlos"
+#
+# Exemplo de execução:
+# Entrada:
+# 3
+# Carlos, 40, normal
+# Ana, 70, normal
+# Bruno, 30, urgente
+#
+# Saída:
+# Ordem de Atendimento: Bruno, Ana, Carlos
+
+
+
+
+
+# Entrada do número de pacientes
+n = int(input().strip())  # int converte o string para numero inteiro (input recebe strings) // strip tira espaços extras no começo e fim
+
+# Lista para armazenar pacientes
+pacientes = []  # criamos lista vazia. Vazia pois gaurdaremos novos dados nela: todos os paciente,s cad aum com (nome, idade, status)
+
+# Loop para entrada de dados
+for _ in range(n):   # repete codigo n vezes, cada vez para um paciente
+    nome, idade, status = input().strip().split(", ")  
+          # lê a linha, tira espaços extras e separa pelo ", ". "Carlos, 40, normal" → ["Carlos", "40", "normal"].
+          # nome, idade, status = ... → atribui cada parte às variáveis.
+    idade = int(idade)     # idade = int(idade) → transforma idade em número inteiro.
+    pacientes.append((nome, idade, status))     # pacientes.append((nome, idade, status)) → salva o paciente como uma tupla dentro da lista pacientes.
+
+# Ordene por prioridade: urgente > idosos > demais:
+urgentes = []
+idosos = []
+demais = []
+
+for nome, idade, status in pacientes:   # for percorrerá cada paciente da lista
+  if status.lower() == "urgente":  # status.lower() → deixa em minúsculo (para evitar erro se alguém digitar "Urgente" ou "URGENTE").
+    urgentes.append((nome, idade))
+  elif idade >= 60:         # Se não for urgente mas idade ≥ 60 → coloca em idosos. Separa, DEPOIS ordena. 
+    idosos.append(nome)
+  else:
+    demais.append(nome)
+
+# Agora, sim, ORDENAMOS. Ordena pelo 2° elemento da tupla (idade, indice é 1), do maior para o menor (reverse=True).  
+# Exemplo antes do sort: [("Bruno", 30), ("Clara", 80)].Depois: [("Clara", 80), ("Bruno", 30)].
+urgentes.sort(key=lambda x: x[1], reverse=True)                                                                   
+urgentes = [nome for nome, _ in urgentes]                        # extrai só os nomes. Exemplo: ["Clara", "Bruno"].
+  
+ordem = urgentes + idosos + demais                               # Primeiro os urgentes, depois os idosos, depois os demais.
+  
+# Exiba a ordem de atendimento com título e vírgulas:
+print("Ordem de Atendimento: ", ", ".join(ordem))                # ", ".join(ordem) → junta os nomes da lista em uma única string, separados por vírgula.
+                                                                 # Exemplo: ["Bruno", "Ana", "Carlos"] → "Bruno, Ana, Carlos".
+# ============================================================
