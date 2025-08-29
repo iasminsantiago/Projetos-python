@@ -1,0 +1,79 @@
+# ============================================================
+# Descrição:
+# Uma pousada deseja automatizar seu sistema de reservas.
+# Criar uma função que receba uma lista de quartos disponíveis
+# e uma lista de reservas solicitadas. A função deve verificar
+# quais reservas podem ser aceitas e quais devem ser recusadas
+# por falta de disponibilidade.
+#
+# 📌 Regras:
+# - Um quarto só pode ser reservado se estiver disponível.
+# - Quando um quarto é reservado, ele deixa de estar disponível.
+# - Reservas solicitadas para quartos indisponíveis devem ser recusadas.
+#
+# Entrada:
+# - Linha 1: lista de quartos disponíveis (números separados por espaço).
+# - Linha 2: lista de quartos solicitados pelos clientes.
+#
+# Processamento:
+# - Criar listas de confirmadas e recusadas.
+# - Percorrer cada reserva.
+# - Verificar se o quarto está disponível.
+# - Atualizar o estado da disponibilidade (quartos_disponiveis.remove(quarto)).
+#
+# Saída:
+# - Lista de reservas confirmadas.
+# - Lista de reservas recusadas.
+#
+# Exemplo de execução:
+# Entrada:
+# 101 102 103 104
+# 102 105 101 103
+#
+# Saída:
+# Reservas confirmadas: 102 101 103
+# Reservas recusadas: 105
+# ============================================================
+
+
+
+def processar_reservas():   # Tudo que estiver indentado dentro dela faz parte dessa função.
+    # Entrada dos quartos disponíveis
+    quartos_disponiveis = set(map(int, input().split()))
+                                                          # .split() → separa os números pelo espaço, transformando em uma lista de strings.
+                                                          # map(int, ...) → converte cada string em inteiro. Cada elemento é convertido em inteiro.
+                                                          # map(função, iterável) → aplica uma função a cada elemento de um iterável (como lista, tupla, etc) e retorna um objeto que você pode converter em lista ou conjunto.
+                                                                # função → algo que transforma o valor.
+                                                                # iterável → a lista ou conjunto de valores que você quer transformar.
+                                                          # set(...) → cria um conjunto de números. 
+                                                          # Conjuntos facilitam a verificação de disponibilidade (if quarto in quartos_disponiveis) e evitam duplicatas.
+   
+
+    # Entrada das reservas solicitadas 
+    reservas_solicitadas = list(map(int, input().split()))  # Funciona parecido com o anterior, mas usamos lista (list) para manter a ordem dos pedidos.
+                                                            # Entrada: 102 105 101 103 → reservas_solicitadas = [102, 105, 101, 103]
+
+    # Crie o processamento das reservas:
+    confirmadas = []
+    recusadas = []
+    
+
+    # Verifique se cada reserva pode ser confirmada com base na disponibilidade dos quartos: 
+      # 💡 Aqui é onde os dados são realmente processados e transformados:
+        # eu decido quem fica confirmado e quem é recusado.
+    for quarto in reservas_solicitadas:           # for quarto in reservas_solicitadas: → percorre cada pedido de reserva.
+      if quarto in quartos_disponiveis:
+        confirmadas.append(quarto)
+        quartos_disponiveis.remove(quarto)        # remove para não ser reservado de novo
+      else:
+        recusadas.append(quarto)                  
+
+    # Saída dos resultados conforme especificação
+    print("Reservas confirmadas:", " ".join(map(str, confirmadas)))
+    print("Reservas recusadas:", " ".join(map(str, recusadas)))   
+      # " ".join(map(str, confirmadas)) → transforma cada número da lista em string e junta todos separados por espaço.
+
+# Chamada da função principal
+processar_reservas()  
+  # Aqui estamos executando a função que definimos.
+  # Sem essa linha, o código só existiria como função, mas não faria nada até ser chamada.
