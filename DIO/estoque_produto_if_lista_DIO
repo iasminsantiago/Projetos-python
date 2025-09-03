@@ -1,0 +1,32 @@
+# 🛒 Sistema de Estoque de Produtos
+
+## 📌 Descrição
+"""Este projeto implementa um sistema simples de estoque em Python.  
+O programa permite verificar se um produto solicitado está disponível no estoque da loja.
+
+---
+
+## 📥 Entrada / Input
+- Nome do produto solicitado pelo usuário  
+Exemplo: Camiseta
+
+## 📤 Saída / Output
+- Se o produto estiver disponível: Produto disponível
+- Caso contrário: Produto esgotado
+"""
+
+
+# Lista de produtos disponíveis no estoque
+estoque = ["Camiseta", "Calça", "Tênis", "Boné", "Jaqueta"]
+
+# Entrada do usuário
+produto = input().strip()
+
+# Verifica se o produto está no estoque:
+if produto in estoque:
+  print("Produto disponível")
+else:
+  print("Produto esgotado")
+
+
+  print("Produto esgotado")
