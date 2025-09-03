@@ -1,0 +1,41 @@
+# 🍽️ Pedido em Restaurante
+
+## 📌 Descrição
+# Este projeto implementa uma classe `Pedido` em Python que representa um pedido em um restaurante.  
+# O programa permite adicionar itens (com preços) e calcular o **valor total da conta**.
+
+---
+
+## 📥 Entrada
+# - Um número inteiro indicando a **quantidade de itens**.
+#- Em seguida, os itens no formato `Nome Preço`.
+
+## 📤 Saída
+# - Valor total da conta, formatado com **duas casas decimais**.
+
+
+class Pedido:
+    def __init__(self):
+        self.itens = []          # lista
+    
+    # Cria um método chamado adicionar_item que recebe um preço e adiciona à lista de itens:
+    def adicionar_item(self, preco: float):
+        # Adicione o preço do item à lista:
+        self.itens.append(preco)  
+
+    # Cria um método chamado calcular_total que retorna a soma de todos os preços da lista:
+    def calcular_total(self) -> float:
+        # Retorna a soma de todos os preços
+        return sum(self.itens)
+
+quantidade_pedidos = int(input().strip())
+
+pedido = Pedido()
+
+for _ in range(quantidade_pedidos):
+    entrada = input("Digite nome e preço: ").strip()        # entrada é a string que lê do usuário
+    nome, preco = entrada.rsplit(" ", 1)                    # r = right  1 indica quantas vezes o split ocorrerá 
+    # Chama o método adicionar_item corretamente: 
+    pedido.adicionar_item(float(preco))
+# Exibe o total formatado com duas casas decimais:
+print(f"{pedido.calcular_total():.2f}")
