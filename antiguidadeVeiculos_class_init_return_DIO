@@ -1,0 +1,49 @@
+# 🚗 Verificador de Antiguidade de Veículo
+## 📌 Descrição
+# Este projeto implementa uma classe `Veiculo` em Python que representa um carro com **marca**, **modelo** e **ano**.  
+# O programa possui um método que verifica se o carro é considerado **antigo** (mais de 20 anos) ou **novo**.
+# ---
+## 📥 Entrada
+# - Marca (texto)
+# - Modelo (texto)
+# - Ano (inteiro)
+# ---
+## 📤 Saída
+# - "Veículo antigo" → caso o carro tenha mais de 20 anos.  
+# - "Veículo novo" → caso contrário.  
+# ---
+## ▶️ Como Executar
+# 1. Clone o repositório:
+#    ```bash
+#   git clone https://github.com/seu-usuario/veiculo-antigo.git
+# 2. Entre na pasta do projeto: cd veiculo-antigo
+# 3. Execute o programa: python veiculo.py
+
+
+
+// módulos
+from datetime import datetime
+
+# Cria a Classe Veiculo e armazena sua marca, modelo e ano como atributos:
+class Veiculo:                                                        // equivalente a public class Veiculo
+    def __init__(self, marca: str, modelo: str, ano: int):            // método construtor do python, equivalente a public Class
+      self.marca = marca                                              // equivalente a this em java
+      self.modelo = modelo
+      self.ano = ano
+        
+    # Implementa o método verificar_antiguidade e calcula a diferença entre o ano atual e o ano do veículo:
+    def verificar_antiguidade(self) -> (str):
+      ano_atual = datetime.now().year
+      if ano_atual - self.ano > 20:
+        return "Veículo antigo"
+      else:
+        return "Veículo novo"
+
+# Entrada direta
+marca = input("Informe a marca: ").strip()
+modelo = input("Informe o modelo: ").strip()
+ano = int(input("Informe o ano: ").strip())
+
+# Instanciando o objeto e verificando a antiguidade
+veiculo = Veiculo(marca, modelo, ano)                                 // equivalente a  public static void main(String[] args) {
+print(veiculo.verificar_antiguidade())
