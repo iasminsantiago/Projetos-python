@@ -25,9 +25,9 @@
 from datetime import datetime
 
 # Cria a Classe Veiculo e armazena sua marca, modelo e ano como atributos:
-class Veiculo:                                                        // equivalente a public class Veiculo
-    def __init__(self, marca: str, modelo: str, ano: int):            // método construtor do python, equivalente a public Class
-      self.marca = marca                                              // equivalente a this em java
+class Veiculo:                                                        # equivalente a public class Veiculo
+    def __init__(self, marca: str, modelo: str, ano: int):            # método construtor do python, equivalente a public Class
+      self.marca = marca                                              # equivalente a this em java
       self.modelo = modelo
       self.ano = ano
         
@@ -45,5 +45,5 @@ modelo = input("Informe o modelo: ").strip()
 ano = int(input("Informe o ano: ").strip())
 
 # Instanciando o objeto e verificando a antiguidade
-veiculo = Veiculo(marca, modelo, ano)                                 // equivalente a  public static void main(String[] args) {
+veiculo = Veiculo(marca, modelo, ano)                                 # equivalente a  public static void main(String[] args) {
 print(veiculo.verificar_antiguidade())
