@@ -1,0 +1,35 @@
+# 🔐 Sistema de Login de Funcionários
+
+## 📌 Descrição
+# Este projeto implementa um sistema simples de login em Python.  
+# O programa verifica se o usuário está cadastrado e se a senha informada está correta, permitindo ou negando o acesso.
+
+#---
+
+## 📥 Entrada / Input
+#- Primeira linha: Nome do usuário cadastrado  
+#- Segunda linha: Senha correspondente ao usuário  
+
+## 📤 Saída / Output
+# - Se as credenciais estiverem corretas: Acesso permitido
+# - Caso contrário: Usuário ou senha incorretos
+
+
+# Dicionário com usuários cadastrados e suas senhas
+usuarios = {
+    "joao": "1234",
+    "ana": "abcd",
+    "maria": "senha123",
+    "marcelo": "iou789",
+
+}
+
+# Entrada do usuário
+usuario = input("Informar seu usuário: ").strip()
+senha = input("Informar sua senha: ").strip()
+
+# Verifica se o usuário existe e a senha está correta:
+if usuario in usuarios and usuarios[usuario] == senha:      # não funciona com if usuario, senha in usuarios pois usuarios é um dicionário, isso não verifica a chave e valor juntos.
+  print("Acesso permitido")
+else:
+  print("Usuário ou senha incorretos")
