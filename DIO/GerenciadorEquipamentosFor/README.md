@@ -46,6 +46,4 @@ Switch
 
 ---
 
-## 🧾 Autor(a)
-
-Projeto desenvolvido por **Iasmin S.** como parte dos estudos em **Python** e **manipulação de listas** 🩷
+Projeto desenvolvido por **Iasmin Santiago** como parte dos estudos em **Python** e **manipulação de listas** 🩷
