@@ -9,3 +9,4 @@ soma = o
 for i in range (i, m+1):
   soma += i
 print("Soma: ", soma)
+# como só desejo mostrar a soma no final, não coloquei print(soma) dentro do laço if. Senão, ele mostraria o valor de soma, atualizado a cada repetição.
