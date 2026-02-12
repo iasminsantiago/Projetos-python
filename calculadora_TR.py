@@ -40,11 +40,13 @@ else:
   operacao_valida = False
   print("Operação inválida.")
 
-if operacao_valida = True:
+if operacao_valida:
   print("Resultado = ", resultado)
 
 
-
+# testei usar print sem if operacao_valida: para b == 0 e printou a mensagem de operaçao inválida, mas deu name error.
+# Isso ocorreu pois, no caso de b == 0, resultaado nao foi definido e, ao final do codigo, pede-se para printar resultado. 
+# Ja quando fazemos b != 0, não ha erro.
           
 
           
