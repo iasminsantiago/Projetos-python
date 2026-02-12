@@ -1,40 +1,71 @@
+## DIFERENÇAS
+- snake_case
+- Tem PIP
+- não finaliza com ;
+- não tem main padrão, este é só uma boa prática
+
 ## CASTING
-float -> int
-mostar o valor em float e em int. 
+- converter valor de um tipo em outro
+- float -> int
+- mostar o valor em float e em int. 
+```python
 valor = 7.9
 inteiro = int(valor)
 print("float: ", valor)
 print("int: ", inteiro)
-
-
-Se converter valor e armazenar int nela mesma, depois que converter, não posso usar mais o valor como float. Se precisar usa-lo, depois de converter não mudo variável diretamente. Crio outra variável que armazene o resultado.
+```
+- Se eu converter e armazenar o resultado na mesma variável, perco o valor original.
+- Depois que converter, não posso usar mais o valor como float.
+- Se eu ainda precisar do valor original, crio outra variável para armazenar o resultado da conversão.
 
 
 ## PIP
 - Preferred installer program
-- gerencia e instala bibliotecas de terceiros
-- é programa do python, NÃO tem no java. Usamos no terminal (do windows, do vs code)
-- - pip install jacoteXY.py
+- gerencia pacotes do python 
+- É um programa do ecossistema Python, NÃO tem no java (Java usa Maven/Gradle).
+- Usamos no terminal (do windows, do vs code)
+```python
+  pip install pacote_tal
+```
+ 
+  
+Funções:
+- Instalar bibliotecas de terceiros
+- Atualizar bibliotecas
+- Remover bibliotecas
 
 
 ## __name__ e __main__
-script.py ----
+```python
+# script.py ----
 def main():
   print("olá")
 
 if __name__ = "__main__":
   main()
+```
+- __name__ é uma variável especial do Python.
+- Quando o arquivo é executado diretamente, o valor de __name__ é "__main__", e Olá será printado. 
+- Quando o arquivo é importado em outro arquivo, o valor de __name__ passa a ser o nome do módulo, não executando main() e nem printando Olá.
+- Se eu rodar script.py diretamente → ele executa main().
+- Se eu importar script.py em outro arquivo → o main() não será executado automaticamente.
+- Isso evita que código seja executado sem intenção quando estamos apenas importando funções.
+- Main é apenas uma função que nomemei como main, não tem o mesmo papel obrigatório que no Java, É apenas uma boa prática, para mostrar o ponto de entrada/começo do meu programa.
 
-se o nome do arquivo for main, ele executa o codigo main e printa Olá.
-Mas quando importo meu arquivo (script.py) em outro, com nome de arquivo diferente do meu, ele não executará o main() automaticamente, não printando Olá.
-Isso impede que meu código seja executado autoamaticamente num código em que a pessoa apenas queria importar meu arquivo.
 
-Main é apenas uma função criada, não tem a função que main tem no java, não é necessário. É apenas uma boa prática, para mostrar o ponto de entrada/começo do meu programa.
+## interpolar 
+- interpolar = inserir valores dentro de uma string.
+- inserir ou colocar elementos entre outros já existentes
+- {} é usado para interpolar, junto com f-string.
+  
+ ```python
+nome = input("Digite idade: ")
+idade = int(input( "digite nome: ")
+printf("Olá, {nome}, você tem {idade} anos!")
+```
 
-## interpolar = inserir, ao trocar algo por isso
-
-
-
+- "Olá" e "você tem" são strings estáticas, aparecem exatamente onde descritas
+- {nome} e {idade} são substituídos pelos valores das variáveis.
 
 
 
