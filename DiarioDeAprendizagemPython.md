@@ -9,7 +9,13 @@ usa # para inline
 
 ou """ texto """
 
-
+## FACILIDADES
+- ("\nQuebra linha")
+- ("\tDá tab na exibição") (tabulação)
+- ```python
+  print(""sem quebra ", end="")
+  print("de linha, mesmo havendo 2 prints", end="")
+  '''
 
 ## PRINT
 - se refere o fato histórico de que, nos primeiros computadores, os terminais nao mostravam o resultado em tela: literalmente o imprimiam, para os mostrar em folha de papel.
