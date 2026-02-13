@@ -19,7 +19,7 @@ while tentativas <3:
     print(f"PIN incorreto, tentativa {tentativas} de 3.")
     
 
-print("Acesso liberado" if liberado else "Acesso bloqueado.")
+print("Acesso liberado!" if liberado else "Acesso bloqueado.")
 
 
     
