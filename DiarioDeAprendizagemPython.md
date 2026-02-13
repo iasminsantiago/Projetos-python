@@ -4,6 +4,12 @@
 - não finaliza com ;
 - não tem main padrão, este é só uma boa prática
 
+## FUNÇÕES
+- escopo: variáveis dentro da função, só funcionam quando estou rodando a funçao em si
+- atributos:
+- parâmetros: entradas que funçao recebe para aplicar como valor de suas variáveis (ex.: a, b, c)
+- aplicadas em validação de dados (CPF), padronizaçao de saídas (aplicando casting, lower() no return), cálculos reutilizáveis (média), organização por etapas (ler dados, processar, exibir resultados)
+
 ## PRINT
 - se refere o fato histórico de que, nos primeiros computadores, os terminais nao mostravam o resultado em tela: literalmente o imprimiam, para os mostrar em folha de papel.
 
