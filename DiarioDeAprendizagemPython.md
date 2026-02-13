@@ -5,7 +5,7 @@
 - não tem main padrão, este é só uma boa prática
 
 ## COMENTÁRIO
-# inline
+usa # para inline
 
 ou """ texto """
 
