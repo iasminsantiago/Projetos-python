@@ -9,7 +9,6 @@ usa # para inline
 
 ou """ texto """
 
-ou ```texto ```
 
 
 ## PRINT
