@@ -4,11 +4,13 @@
 - não finaliza com ;
 - não tem main padrão, este é só uma boa prática
 
-## FUNÇÕES
-- escopo: variáveis dentro da função, só funcionam quando estou rodando a funçao em si
-- atributos:
-- parâmetros: entradas que funçao recebe para aplicar como valor de suas variáveis (ex.: a, b, c)
-- aplicadas em validação de dados (CPF), padronizaçao de saídas (aplicando casting, lower() no return), cálculos reutilizáveis (média), organização por etapas (ler dados, processar, exibir resultados)
+## COMENTÁRIO
+# inline
+
+ou """ texto """
+
+ou ```texto ```
+
 
 ## PRINT
 - se refere o fato histórico de que, nos primeiros computadores, os terminais nao mostravam o resultado em tela: literalmente o imprimiam, para os mostrar em folha de papel.
@@ -102,6 +104,15 @@ printf("Olá, {nome}, você tem {idade} anos!")
 - usado em chatbots ("digite sair")
   - se o comando não foi "sair", break é ignorado e o cursor volta ao while true
     - usamos lower para respostas SAIR, Sair etc serem transformadas/normalizadas/padronizadas como sair
+
+
+## FUNÇÕES
+- escopo: variáveis dentro da função, só funcionam quando estou rodando a funçao em si
+- atributos:
+- parâmetros: entradas que funçao recebe para aplicar como valor de suas variáveis (ex.: a, b, c)
+- aplicadas em validação de dados (CPF), padronizaçao de saídas (aplicando casting, lower() no return), cálculos reutilizáveis (média), organização por etapas (ler dados, processar, exibir resultados)
+
+
 
 ## 
 ---
