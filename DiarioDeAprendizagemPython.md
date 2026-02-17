@@ -118,8 +118,35 @@ printf("Olá, {nome}, você tem {idade} anos!")
 - aplicadas em validação de dados (CPF), padronizaçao de saídas (aplicando casting, lower() no return), cálculos reutilizáveis (média), organização por etapas (ler dados, processar, exibir resultados)
 
 
+## ESTRUTURAS DE DADOS
+### LISTA - ordenada mutável
+- Mutável -> permite adicionar, remover e alterar
+- Ordenada -> cada elemento tem um índice
+- Uso: preciso de coleçao que cresça, diminua ou mude
+- ```nomes = ["Ana", "Bia"]```
+- Métodos comuns: append, insert; remove; pop, sort
+- ```python
+  numeros = [3, 1, 9]
+  numeros.append(7)     # adiciona no final
+  numeros.sort()        # ordena
+  print(numeros)        # [1, 3, 7, 9]
+  ```
 
-## 
+### TUPLA - ordenada fixa
+- Imutável
+- Ordenada
+- Uso: preciso de comjunto de valores fixos -> ordendas x,y, data
+- ```ponto = (10,20)```
+- ```python
+  ponto = (10, 20)
+  x, y = ponto   # desempacotamento
+  print("x =", x, "y =", y)
+  ```
+
+### DICIONÁRIO
+- Chave-valor
+- Uso: buscar valores através de nomes/chaves deles. Ex.: cadastro
+- ```aluuno = {"nome": "joão", "idade": 18}```
 ---
 ### Fontes
 Treina Recife - Portal do Aluno
